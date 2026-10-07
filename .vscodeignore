@@ -1,0 +1,9 @@
+node_modules/**
+src/**
+test/**
+.vscode/**
+.git/**
+*.vsix
+package-lock.json
+tsconfig.json
+out/**/*.map
