@@ -17,7 +17,7 @@
     "Other"
   ],
   "activationEvents": [
-    "*"
+    "onStartupFinished"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -33,7 +33,6 @@
         "openWorkspaceIfExists.enabled": {
           "type": "boolean",
           "default": true,
-          "value": true,
           "description": "Enable automatic workspace detection and opening on startup."
         },
         "openWorkspaceIfExists.pattern": {
