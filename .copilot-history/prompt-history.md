@@ -72,3 +72,25 @@ fix
 Added the Marketplace publisher identifier `joffroy` to the extension manifest to fix the upload validation error.
 
 ---
+
+## 2026-10-07T23:09:30Z
+
+### Environment
+- IDE: VS Code
+- Assistant: GitHub Copilot
+- Model: unknown
+
+### User Prompt
+do the fix for
+
+### Files Modified
+- package.json
+- LICENSE
+- README.md
+- .github/workflows/release.yml
+- .copilot-history/prompt-history.md
+
+### Summary
+Added repository metadata and the user-selected Apache-2.0 license to address Marketplace packaging warnings.
+
+---

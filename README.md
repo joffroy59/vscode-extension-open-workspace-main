@@ -2,6 +2,11 @@
 
 Opens an existing `.code-workspace` file that contains the folder currently opened in VS Code.
 
+## License
+
+This project is licensed under the Apache License 2.0. See [LICENSE](./LICENSE)
+for the full license text.
+
 ## Settings
 
 | Setting                                    | Default                                                                                                                                                                                          | Description                      |
