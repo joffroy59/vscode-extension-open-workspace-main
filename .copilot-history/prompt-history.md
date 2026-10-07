@@ -53,3 +53,22 @@ build package
 Excluded local Copilot prompt-history data from the distributable VSIX package.
 
 ---
+
+## 2026-10-07T23:02:45Z
+
+### Environment
+- IDE: VS Code
+- Assistant: GitHub Copilot
+- Model: unknown
+
+### User Prompt
+fix
+
+### Files Modified
+- package.json
+- .copilot-history/prompt-history.md
+
+### Summary
+Added the Marketplace publisher identifier `joffroy` to the extension manifest to fix the upload validation error.
+
+---
