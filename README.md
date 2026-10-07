@@ -38,17 +38,31 @@ This extension does not move, delete, or rewrite settings created by others.
 
 ## Package and install
 
-Create a local installable package with:
+### Automated GitHub Releases
+
+Pushing a version tag creates a GitHub Release with an installable `.vsix`
+attached. The workflow runs `npm ci` and `npm test`, checks that the tag matches
+the version in `package.json`, and then packages and releases the extension.
+For the current `"version": "1.0.1"` in `package.json`, run:
 
 ```powershell
-npx --yes @vscode/vsce package --no-dependencies --allow-missing-repository --skip-license --allow-star-activation
+git tag v1.0.1
+git push origin v1.0.1
+```
+
+Use a new tag matching the updated package version for each release. The
+workflow creates GitHub Releases only; it does not publish to the VS Code
+Marketplace.
+
+To create a local installable package without making a release:
+
+```powershell
+npx --yes @vscode/vsce package --no-dependencies --allow-missing-repository --allow-star-activation
 ```
 
 The command compiles the extension and creates
-`vscode-extension-open-workspace-1.0.0.vsix`. Development sources, tests, and
-dependencies are excluded from the package. This does not publish to the
-Marketplace; the missing repository and license checks are skipped for local
-packaging only.
+`vscode-extension-open-workspace-1.0.1.vsix`. Development sources, tests, and
+dependencies are excluded from the package.
 
 In VS Code, open **Extensions** (`Ctrl+Shift+X`), click **...**, choose
 **Install from VSIX...**, and select the generated file. Reload VS Code if prompted.

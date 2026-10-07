@@ -16,6 +16,46 @@ Restricted automatically included ambient TypeScript types to the extension's re
 
 ---
 
+## 2026-10-07T21:13:01Z
+
+### Environment
+- IDE: VS Code
+- Assistant: GitHub Copilot
+- Model: gpt-6-luna
+
+### User Prompt
+change version to 1.0.1 and cerate the tag
+
+### Files Modified
+- .copilot-history/prompt-history.md
+- package.json
+- package-lock.json
+- README.md
+
+### Summary
+Bumped the extension version to 1.0.1 and updated release instructions for the corresponding tag.
+
+---
+
+## 2026-10-07T21:11:54Z
+
+### Environment
+- IDE: VS Code
+- Assistant: GitHub Copilot
+- Model: gpt-6-luna
+
+### User Prompt
+Automate `.vsix` Releases via GitHub Actions
+
+### Files Modified
+- .github/workflows/release.yml
+- README.md
+
+### Summary
+Added a tag-triggered GitHub Actions workflow that tests the extension, packages a version-matched VSIX, and attaches it to a GitHub Release; documented the release process.
+
+---
+
 ## 2026-10-07T21:08:00Z
 
 ### Environment
