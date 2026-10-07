@@ -35,6 +35,11 @@
           "default": true,
           "description": "Enable automatic workspace detection and opening on startup."
         },
+        "openWorkspaceIfExists.confirmBeforeOpen": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show a confirmation popup before opening a single matching workspace."
+        },
         "openWorkspaceIfExists.pattern": {
           "type": "string",
           "default": "*.code-workspace",
