@@ -28,6 +28,7 @@ function harness(t, options = {}) {
             getConfiguration: () => ({
                 get: (key, fallback) => ({
                     enabled: options.enabled ?? false,
+                    confirmBeforeOpen: options.confirmBeforeOpen ?? true,
                     pattern: '*.code-workspace',
                     workspacesFolder: options.configuredSearch ?? search
                 }[key] ?? fallback)
@@ -78,6 +79,12 @@ test('default search folder uses OneDrive environment variable', () => {
         '${env:OneDrive}\\workspace');
 });
 
+test('confirmation popup setting is enabled by default', () => {
+    const setting = manifest.contributes.configuration.properties['openWorkspaceIfExists.confirmBeforeOpen'];
+    assert.equal(setting.type, 'boolean');
+    assert.equal(setting.default, true);
+});
+
 test('extension activates at startup rather than after startup finishes', () => {
     assert.ok(manifest.activationEvents.includes('*'));
     assert.ok(!manifest.activationEvents.includes('onStartupFinished'));
@@ -109,6 +116,14 @@ test('single matching absolute folder confirms and opens in the same window', as
     assert.equal(h.calls.opened[0][0], 'vscode.openFolder');
     assert.equal(h.calls.opened[0][1].fsPath, file);
     assert.equal(h.calls.opened[0][2].forceNewWindow, false);
+});
+
+test('single matching workspace opens directly when confirmation is disabled', async t => {
+    const h = harness(t, { confirmBeforeOpen: false });
+    const file = h.workspace('one.code-workspace');
+    await h.command();
+    assert.equal(h.calls.confirmations.length, 0);
+    assert.equal(h.calls.opened[0][1].fsPath, file);
 });
 
 test('relative paths, comments and trailing commas are supported', async t => {

@@ -16,6 +16,27 @@ Restricted automatically included ambient TypeScript types to the extension's re
 
 ---
 
+## 2026-10-07T23:45:21Z
+
+### Environment
+- IDE: VS Code
+- Assistant: GitHub Copilot
+- Model: unknown
+
+### User Prompt
+add in settings a checkbox to set show or not the popup for confimation
+
+### Files Modified
+- package.json
+- src/extension.ts
+- test/extension.test.js
+- .copilot-history/prompt-history.md
+
+### Summary
+Added a setting to control the single-workspace confirmation popup, opening the workspace directly when the popup is disabled.
+
+---
+
 ## 2026-10-07T21:13:01Z
 
 ### Environment
@@ -132,5 +153,25 @@ do the fix for
 
 ### Summary
 Added repository metadata and the user-selected Apache-2.0 license to address Marketplace packaging warnings.
+
+---
+
+## 2026-10-07T23:50:31Z
+
+### Environment
+- IDE: VS Code
+- Assistant: GitHub Copilot
+- Model: unknown
+
+### User Prompt
+change version and build locally
+
+### Files Modified
+- package.json
+- package-lock.json
+- .copilot-history/prompt-history.md
+
+### Summary
+Bumped the extension version from 1.0.1 to 1.0.2 in the package manifest and lockfile, then built locally.
 
 ---
