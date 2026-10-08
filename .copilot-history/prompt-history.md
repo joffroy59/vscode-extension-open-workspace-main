@@ -16,6 +16,25 @@ Restricted automatically included ambient TypeScript types to the extension's re
 
 ---
 
+## 2026-10-08T02:16:30Z
+
+### Environment
+- IDE: VS Code
+- Assistant: GitHub Copilot
+- Model: unknown
+
+### User Prompt
+mege develop , make a release
+
+### Files Modified
+- package.json
+- .copilot-history/prompt-history.md
+
+### Summary
+Corrected the release candidate's activation event to match the documented immediate-startup behavior and regression test; will validate before merging develop and tagging 1.0.2.
+
+---
+
 ## 2026-10-08T02:02:00Z
 
 ### Environment
