@@ -16,6 +16,26 @@ Restricted automatically included ambient TypeScript types to the extension's re
 
 ---
 
+## 2026-10-08T02:02:00Z
+
+### Environment
+- IDE: VS Code
+- Assistant: GitHub Copilot
+- Model: unknown
+
+### User Prompt
+release and publish to marketplace
+
+### Files Modified
+- package.json
+- README.md
+- .copilot-history/prompt-history.md
+
+### Summary
+Restored immediate startup activation required by the documented behavior and regression test, and updated the release examples to version 1.0.2 before validating the candidate.
+
+---
+
 ## 2026-10-07T23:45:21Z
 
 ### Environment
