@@ -155,3 +155,23 @@ do the fix for
 Added repository metadata and the user-selected Apache-2.0 license to address Marketplace packaging warnings.
 
 ---
+
+## 2026-10-07T23:50:31Z
+
+### Environment
+- IDE: VS Code
+- Assistant: GitHub Copilot
+- Model: unknown
+
+### User Prompt
+change version and build locally
+
+### Files Modified
+- package.json
+- package-lock.json
+- .copilot-history/prompt-history.md
+
+### Summary
+Bumped the extension version from 1.0.1 to 1.0.2 in the package manifest and lockfile, then built locally.
+
+---
