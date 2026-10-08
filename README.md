@@ -43,11 +43,11 @@ This extension does not move, delete, or rewrite settings created by others.
 Pushing a version tag creates a GitHub Release with an installable `.vsix`
 attached. The workflow runs `npm ci` and `npm test`, checks that the tag matches
 the version in `package.json`, and then packages and releases the extension.
-For the current `"version": "1.0.2"` in `package.json`, run:
+For the current `"version": "1.0.3"` in `package.json`, run:
 
 ```powershell
-git tag v1.0.2
-git push origin v1.0.2
+git tag v1.0.3
+git push origin v1.0.3
 ```
 
 Use a new tag matching the updated package version for each release. The
@@ -61,7 +61,7 @@ npx --yes @vscode/vsce package --no-dependencies --allow-missing-repository --al
 ```
 
 The command compiles the extension and creates
-`vscode-extension-open-workspace-1.0.2.vsix`. Development sources, tests, and
+`vscode-extension-open-workspace-1.0.3.vsix`. Development sources, tests, and
 dependencies are excluded from the package.
 
 In VS Code, open **Extensions** (`Ctrl+Shift+X`), click **...**, choose
