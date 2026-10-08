@@ -55,9 +55,11 @@ async function checkAndOpenWorkspace() {
         let selected;
         if (candidates.size === 1) {
             selected = [...candidates.values()][0];
-            const confirmOpen = await vscode.window.showInformationMessage(`Found workspace file: ${path.basename(selected.fsPath)}. Open it?`, 'Open Workspace', 'Ignore');
-            if (confirmOpen !== 'Open Workspace') {
-                return;
+            if (config.get('confirmBeforeOpen', true)) {
+                const confirmOpen = await vscode.window.showInformationMessage(`Found workspace file: ${path.basename(selected.fsPath)}. Open it?`, 'Open Workspace', 'Ignore');
+                if (confirmOpen !== 'Open Workspace') {
+                    return;
+                }
             }
         }
         else {
